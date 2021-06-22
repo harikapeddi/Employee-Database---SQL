@@ -4,7 +4,7 @@ from employees
 join salaries on employees.emp_no = salaries.emp_no;
 
 create view DA_2 as
-select last_name, first_name, hire_date
+select first_name, last_name, hire_date
 from employees 
 where hire_date>= '1986-01-01 00:00:00'
 and hire_date<'1987-01-01 00:00:00'
@@ -16,7 +16,6 @@ from employees
 join dept_manager on dept_manager.emp_no = employees.emp_no
 join departments on dept_manager.dept_no = departments.dept_no
 order by dept_name;
-
 
 create view DA_4 as
 select employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
